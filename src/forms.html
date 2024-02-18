@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="nezznomi.css" />
+    <title>forms | nezznomi - class-light CSS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href=".">Home</a></li>
+          <li><a href="forms.html">Forms</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Forms</h1>
+      <form>
+        <label>
+          名前
+          <input type="text" name="name" />
+        </label>
+        <label>
+          メールアドレス
+          <input type="email" name="email" />
+        </label>
+        <label>
+          年齢
+          <input type="number" name="age" />
+        </label>
+        <label>
+          コメント
+          <textarea name="comment"></textarea>
+        </label>
+
+        <div class="stack">
+          <fieldset>
+            <legend>ラジオボタン</legend>
+            <label>
+              ラジオボタン1
+              <input type="radio" name="radio" value="1" />
+            </label>
+            <label>
+              ラジオボタン2
+              <input type="radio" name="radio" value="2" />
+            </label>
+            <label>
+              ラジオボタン3
+              <input type="radio" name="radio" value="3" />
+            </label>
+          </fieldset>
+
+          <div class="column">
+            <label>
+              チェックボックス1
+              <input type="checkbox" name="checkbox1" value="1" />
+            </label>
+            <label>
+              チェックボックス2
+              <input type="checkbox" name="checkbox2" value="2" />
+            </label>
+          </div>
+        </div>
+
+        <div class="stack">
+          <button type="submit" class="w-full">送信</button>
+          <button disabled type="button">初期化</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    </script>
+  </body>
+</html>

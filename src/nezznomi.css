@@ -1,0 +1,249 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/*
+  1. より直感的なボックスサイズのモデルを使用
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. デフォルトのマージンを削除
+*/
+* {
+  margin: 0;
+}
+/*
+  3. 高さは%ベースを使用
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  タイポグラフィの微調整
+  4. アクセシブルなline-heightを追加
+  5. テキストのレンダリングを改善
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. メディア要素のデフォルトを改善
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. フォームのfontに関するデフォルトを削除
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. テキストのオーバーフローを回避
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. ルートのスタックコンテキストを作成
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*
+  nezznomi
+*/
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: rgb(251, 251, 250);
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+header {
+  padding: 1rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  min-height: 100px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  background-color: #fff;
+  margin: 8px;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+main h1 {
+  margin-top: 0;
+}
+
+a {
+  color: #333;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 8px;
+}
+
+blockquote {
+  border-left: 4px solid #eee;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  background-color: #f9f9f9;
+}
+
+blockquote p {
+  margin: 0;
+  padding: 0;
+}
+
+blockquote cite {
+  font-size: 0.8em;
+  display: block;
+  margin-top: 0.5em;
+  text-align: right;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 3px solid #eee;
+}
+
+label {
+  display: block;
+}
+
+label input,
+label textarea {
+  margin-top: 0.25rem;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+label input[type='checkbox'],
+label input[type='radio'] {
+  width: auto;
+  margin-bottom: 0;
+}
+
+textarea {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  margin-bottom: 1rem;
+  width: 100%;
+  resize: vertical;
+}
+
+fieldset {
+  border: 1px dotted #aaa;
+  border-radius: 4px;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+/*
+レイアウト
+ */
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.rows {
+  display: flex;
+  flex-direction: row;
+}
+
+.stack > * + * {
+  margin-top: 1rem;
+}

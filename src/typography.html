@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="nezznomi.css" />
+    <title>typography | nezznomi - class-light CSS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href=".">Home</a></li>
+          <li><a href="forms.html">Forms</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Typography</h1>
+      <h2>Classless CSS Template</h2>
+      <h3>Subheading</h3>
+      <h4>Subheading</h4>
+      <h5>Subheading</h5>
+      <h6>Subheading</h6>
+
+      <p>This is a classless CSS template.</p>
+      <p>
+        You can add
+        <code>moreHoge</code>
+        elements inside the main tag.
+      </p>
+
+      <p>
+        <strong>太字</strong>
+        <em>斜体</em>
+        <del>打ち消し線</del>
+        <ins>下線</ins>
+        <mark>マーク</mark>
+        <sub>下付き文字</sub>
+        <sup>上付き文字</sup>
+      </p>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    </script>
+  </body>
+</html>
