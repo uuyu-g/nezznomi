@@ -1,0 +1,64 @@
+body:has(aside) {
+  display: flex;
+  /* flex-direction: column; */
+  /* min-height: 100vh; */
+}
+
+aside {
+  width: 200px;
+  padding: 0 0.5rem;
+}
+
+/* Main area styles */
+aside + main {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+aside h1 {
+  margin: 1rem 0.5rem 0.5rem;
+  font-size: 1.3rem;
+}
+
+aside h1 > a {
+  color: var(--c-primary-dark);
+  text-decoration: none;
+}
+
+aside nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside nav > ul > li {
+  display: block;
+}
+
+aside nav > ul > li + li {
+  margin: 0;
+}
+
+aside nav > ul > li > a {
+  color: #333;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+aside nav > ul > li > a:hover {
+  background-color: #e0e0e0;
+  text-decoration: none;
+}

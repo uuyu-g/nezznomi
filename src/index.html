@@ -12,32 +12,51 @@
   </head>
 
   <body>
-    <header>
+    <header class="container">
       <h1>nezznomi</h1>
       <nav>
         <ul>
           <li><a href=".">Home</a></li>
           <li><a href="typography.html">Typography</a></li>
           <li><a href="forms.html">Forms</a></li>
+          <li><a href="app.html">App</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main class="container">
+      <article>
+        <p>今の家に引っ越してきたから始めた趣味が観葉植物。</p>
+        <p>
+          確か最初に買ったのは40センチくらいのウンベラータだったはず。家のシンボルツリーにしたくて買った。
+        </p>
+        <p>そこから100均やらガーデニングショップやらで買ってだんだん増えてきている。</p>
+        <p>
+          最近はビカクシダが毎日伸びてて楽しい。貯水葉が日々大きくなってるのを、前を通るたびに眺めてしまう。気分は完全に盆栽を眺めるおじいちゃんである。
+        </p>
+        <figure>
+          <img src="https://r2.sizu.me/users/538/post-images/rho4e5a7shf7utknzxvu.jpeg" />
+        </figure>
+      </article>
+
       <pre><code class="language-js">const hello = 'Hello, World!';</code></pre>
       <ul>
         <li>Item 1</li>
-        <li>Item 2</li>
-        <ul>
-          <li>Item 2.1</li>
-          <li>Item 2.2</li>
-          <li>Item 2.3</li>
+        <li>
+          Item 2
           <ul>
-            <li>Item 2.3.1</li>
-            <li>Item 2.3.2</li>
-            <li>Item 2.3.3</li>
+            <li>Item 2.1</li>
+            <li>Item 2.2</li>
+            <li>
+              Item 2.3
+              <ul>
+                <li>Item 2.3.1</li>
+                <li>Item 2.3.2</li>
+                <li>Item 2.3.3</li>
+              </ul>
+            </li>
           </ul>
-        </ul>
+        </li>
       </ul>
       <blockquote>
         <p>
@@ -57,15 +76,14 @@
       </p>
 
       <h2>Features</h2>
-      <a href="#">リンク</a>
-
-      <h3>タイポグラフィ</h3>
-      <h3>レイアウト</h3>
+      <ul>
+        <li>Class-light</li>
+        <li></li>
+      </ul>
     </main>
 
     <footer>
-      <p>nezznomiはclass-lightCSSフレームワークです</p>
-      <p>nezznomi.css is a class-light CSS framework</p>
+      <p>&copy; 2024 uuyu-g</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>

@@ -1,83 +1,13 @@
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
-/*
-  1. より直感的なボックスサイズのモデルを使用
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-/*
-  2. デフォルトのマージンを削除
-*/
-* {
-  margin: 0;
-}
-/*
-  3. 高さは%ベースを使用
-*/
-html,
-body {
-  height: 100%;
-}
-/*
-  タイポグラフィの微調整
-  4. アクセシブルなline-heightを追加
-  5. テキストのレンダリングを改善
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-/*
-  6. メディア要素のデフォルトを改善
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-/*
-  7. フォームのfontに関するデフォルトを削除
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-/*
-  8. テキストのオーバーフローを回避
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-/*
-  9. ルートのスタックコンテキストを作成
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
+@import 'reset.css';
+@import 'constants.css';
+@import 'app.css';
 
 /*
   nezznomi
 */
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -85,6 +15,8 @@ body {
   margin: 0;
   padding: 0;
   overflow: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+    Meiryo, sans-serif, 'Segoe UI Emoji';
 }
 
 header {
@@ -98,13 +30,17 @@ footer {
   min-height: 100px;
 }
 
-nav li {
+nav > ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav > ul > li {
   display: inline;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+nav > ul > li + li {
+  margin: 0 0 0 0.5rem;
 }
 
 nav a {
@@ -119,7 +55,7 @@ nav a:hover {
 main {
   background-color: #fff;
   margin: 8px;
-  padding: 16px;
+  padding: 2rem;
   border-radius: 4px;
   border: 1px solid #eee;
 }
@@ -177,6 +113,7 @@ h6 {
 
 h1 {
   font-size: 2rem;
+  color: var(--c-primary-dark);
 }
 
 h2 {
@@ -226,6 +163,15 @@ legend {
   font-weight: bold;
 }
 
+article > p {
+  line-height: 2;
+  font-size: 1rem;
+}
+
+article > p + * {
+  margin-top: 1.5rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -246,4 +192,21 @@ legend {
 
 .stack > * + * {
   margin-top: 1rem;
+}
+
+.container {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 25%;
+  margin-right: 1rem;
+}
+
+/*
+  warning
+*/
+li+: not(li) {
+  background-color: red;
 }
